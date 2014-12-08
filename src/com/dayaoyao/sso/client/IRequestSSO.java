@@ -9,11 +9,14 @@
 */
 package com.dayaoyao.sso.client;
 
+import com.dayaoyao.sso.po.IRequestProperty;
+import com.dayaoyao.sso.po.IResponseProperty;
+
 /**
  * <p>Title: IRequestSSO.java</p>
- * <p>Description: </p>
+ * <p>Description: 请求单点登录服务器验证用户信息的基类。</p>
  * <p>Copyright: Copyright (c) 2014</p>
- * <p>Company: ColdWorks</p>
+ * <p>Company: xuming</p>
  * @author xuming
  * @date 2014-12-8
  * Email: vip6ming@126.com
@@ -24,11 +27,12 @@ public interface IRequestSSO {
 	 * 
 	 * @author xuming
 	 * 
-	 * @param 参数也应为限定的对象。防止参数设定的不统一。
+	 * @param IRequestProperty 接口的实例对象。统一参数，防止遗漏与请求信息错误。
 	 * 
-	 * @return 返回对象待定，应该为是一个容器类。方便获取登录后信息。
+	 * @return IResponseProperty 接口的实例对象。方便返回信息的统一管理与获取。
 	 * 
 	 * @date 2014-12-8
 	 */
-	public String send();
+	public IResponseProperty send(IRequestProperty reqP);
+	
 }
