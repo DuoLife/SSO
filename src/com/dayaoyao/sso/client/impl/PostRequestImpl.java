@@ -1,4 +1,4 @@
-package com.dayaoyao.sso.client;
+package com.dayaoyao.sso.client.impl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.dayaoyao.sso.client.IRequestSSO;
 import com.dayaoyao.sso.po.IRequestProperty;
 import com.dayaoyao.sso.po.IResponseProperty;
 import com.dayaoyao.sso.property.ServerProperty;
