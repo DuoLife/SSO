@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import com.dayaoyao.sso.client.IRequestSSO;
 import com.dayaoyao.sso.po.IRequestProperty;
 import com.dayaoyao.sso.po.IResponseProperty;
+import com.dayaoyao.sso.po.User;
+import com.dayaoyao.sso.po.impl.RequestPropertyImpl;
 import com.dayaoyao.sso.property.ServerProperty;
+import com.google.gson.Gson;
 
 public class PostRequestImpl implements IRequestSSO{
 
@@ -22,9 +25,10 @@ public class PostRequestImpl implements IRequestSSO{
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("POST");
 			con.setDoInput(true);
-			con.setDoOutput(true);
+			con.setDoOutput(true); 
 			//将请求参数转换为json格式，并写入到输出流中。
-			String json = "";
+			User u = new User();
+			String json = new Gson().toJson(u);
 			setOutStream(con, json);
 			//获得输入流中的对象，应该将其转化为json（之后转化为对象）
 			StringBuffer sb = getInputStream(con);
@@ -53,5 +57,10 @@ public class PostRequestImpl implements IRequestSSO{
 		out.write(json);
 		out.flush();
 		out.close();
+	}
+	
+	public static void main(String[] args) {
+		PostRequestImpl req = new PostRequestImpl();
+		req.send(new RequestPropertyImpl());
 	}
 }

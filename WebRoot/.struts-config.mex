@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/sso.do" location="0,0" dimension="365,116" />
+</FlowViewLayout>
+
