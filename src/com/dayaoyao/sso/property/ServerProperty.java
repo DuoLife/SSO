@@ -12,7 +12,8 @@ public class ServerProperty {
 	
 	public static URL getUrl() {
 		try {
-			return new URL(Host + ":" + Port + action);
+			String url = Host + ":" + Port + action;
+			return new URL(url);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

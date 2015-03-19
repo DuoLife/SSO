@@ -8,6 +8,6 @@ package com.dayaoyao.sso.po;
  * @date 2014-12-8
  * Email: vip6ming@126.com
  */
-public interface IResponseProperty {
+public class IResponseProperty {
 
 }

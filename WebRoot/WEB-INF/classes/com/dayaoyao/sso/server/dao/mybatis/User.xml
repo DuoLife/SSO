@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybaits.org//DTD mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<insert id="insert" parameterType="User">
+		insert into user (name, username, password, age, token, ip, email) values (#{name}, #{username}, #{password}, #{age}, #{token}, #{ip}, #{email})
+	</insert>
+	<select id="selectByUsername" parameterType="Map" resultType="User">
+		select * from user where username = #{username}
+	</select>
+	<select id="selectByEmail" parameterType="Map" resultType="User">
+		select * from user
+	</select>
+</mapper>

@@ -9,7 +9,7 @@
 */
 package com.dayaoyao.sso.client;
 
-import com.dayaoyao.sso.po.IRequestProperty;
+import com.dayaoyao.sso.po.RequestProperty;
 import com.dayaoyao.sso.po.IResponseProperty;
 
 /**
@@ -27,12 +27,12 @@ public interface IRequestSSO {
 	 * 
 	 * @author xuming
 	 * 
-	 * @param IRequestProperty 接口的实例对象。统一参数，防止遗漏与请求信息错误。
+	 * @param RequestProperty 接口的实例对象。统一参数，防止遗漏与请求信息错误。
 	 * 
 	 * @return IResponseProperty 接口的实例对象。方便返回信息的统一管理与获取。
 	 * 
 	 * @date 2014-12-8
 	 */
-	public IResponseProperty send(IRequestProperty reqP);
+	public IResponseProperty send(RequestProperty reqP);
 	
 }
